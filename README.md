@@ -2,7 +2,7 @@
 
 <p>PHP ile kodlanmış bir çizgi roman okuma sitesi.</p>
 
-<p>Admin ve editör gibi farklı rollerin belli yetkiler ile çizgi romanlar ve bölümlerini ekeyebildiği, düzenleyebildiği ve silebildiği bir admin paneli mevcuttur.Disqus API sayesinde kullanıcılar yorum yapabilir ve tepki verebilirler.</p>
+<p>Admin ve editör gibi farklı rollerin belli yetkiler ile çizgi romanlar ve bölümlerini ekeyebildiği, düzenleyebildiği ve silebildiği bir admin paneli mevcuttur. Disqus API sayesinde kullanıcılar yorum yapabilir ve tepki verebilirler.</p>
 
 <p>Sitenin canlı hali <a href="http://5.83.150.211/">http://5.83.150.211/</a> adresindedir.</p>
 
