@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+:root{
+    --primary-color:rgb(0, 0, 0);
+    --second-color: rgb(255, 255, 255);
+    --third-color: rgb(15, 15, 15);
+}
+.light-theme{
+    --primary-color:rgb(255, 255, 255);
+    --second-color: rgb(0, 0, 0);
+    --third-color: rgb(240, 240, 240);
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: var(--second-color);
+}
+body{
+    background-color: var(--third-color);
+    font-family: Poppins;
+}
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:visited{
+    color: var(--primary-color);
+}
+.btn{
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    padding: 1rem;
+    border-radius: 30rem;
+    font-weight: 200;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 10px 0px var(--second-color);
+}
+.anchor{
+    display: block;
+    height: 6rem;
+    margin-top: -6rem;
+    visibility: hidden;
+}
+#scrollToTopBtn{
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 0.3s ease-in-out; /* Geçiş efekti */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.8rem 0.95rem;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    border-radius: 30rem;
+    box-shadow: 0px 0px 10px 0px var(--primary-color);
+    cursor: pointer;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+}
+#scrollToTopBtn.show{
+    opacity: 1; /* Görünür hale getir */
+}
+/*----------------------------------------*/
+.containerheader{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#containerheaderstatic{
+    position: static;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    width:  100%;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 1rem;
+    margin: 0 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+nav:hover{
+    scale: 1.03;
+    box-shadow: 0px 0px 10px 0px var(--second-color);
+}
+.navtext{
+    padding: 0 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.navtext:hover{
+    scale: 1.1;
+}
+.nav1 img{
+    width: 7rem;
+    display: flex;
+}
+.nav1 img:hover{
+    scale: 1.15;
+}
+.nav1{
+    margin: 0 0 0 7%;
+}
+nav .nav2{
+    display: flex;
+    align-items: center;
+}
+.navanasayfa{
+    align-items: center;
+    
+}
+.navanasayfaanasayfa{
+    display: none;
+    align-items: center;
+}
+.navtema{
+    display: flex;
+    align-items: center;
+    cursor: pointer;;
+}
+nav i{
+    scale: 1.2;
+    color: var(--third-color);
+}
+nav .nav3{
+    display: flex;
+    align-items: center;
+}
+nav .nav2 a{
+    margin: 1rem;
+}
+/*----------------------------------------*/
+.containersearch{
+    margin: 2rem 7% 0 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 10px 0px var(--primary-color);
+}
+.containersearch:hover{
+    scale: 1.03;
+    box-shadow: 0px 0px 10px 0px var(--second-color);
+}
+.containersearch form{
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30rem;
+}
+.containersearch input{
+    padding: 1rem 0 1rem 0;
+    font-size: 1rem;
+    width: 70vw;
+    margin-left: 1rem;
+    border-radius: 30rem;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+}
+.containersearch i{
+    color: var(--primary-color);
+}
+/*----------------------------------------*/
+.containerbutunmangalar{
+    margin: 0 7%;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*----------------------------------------*/
+.populer{
+    margin: 0 7%;
+    margin-top: 2rem;
+}
+.baslik{
+    color: var(--second-color);
+    border-bottom: 0.06rem solid var(--second-color);
+}
+.baslik h1{
+    font-weight: 200;
+}
+.baslik h2{
+    font-weight: 200;
+}
+.containermangalar{
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.manga{
+    width: 10rem;
+    height: 18.8rem;
+    margin: 0 1.5rem;
+}
+.manga:hover{
+    scale: 1.08;
+}
+.manga:hover img{
+    box-shadow: 0px 0px 10px 2px var(--second-color);
+}
+.mangaresim button{
+    width: 10rem;
+    height: 15rem;
+    cursor: pointer;
+}
+.mangaresim img{
+    width: 10rem;
+    height: 15rem;
+}
+.mangatext{
+    text-align: center;
+}
+.mangatext h3{
+    color: var(--second-color);
+    font-weight: 200;
+}
+
+/*----------------------------------------*/
+.yenibolum{
+    margin: 0 7%;
+    margin-top: 2rem;
+}
+/*----------------------------------------*/
+.kategoriler{
+    padding: 2rem;
+    background-image: url(images/kategori.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 20px 0px var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.containerkategoriler{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.kategoriler a{
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 30rem;
+    font-size: 1rem;
+    font-weight: 200;
+}
+.kategoriler a:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 10px 2px var(--second-color);
+}
+#kategorilersection{
+    margin: 0 7%;
+    margin-top: 2rem
+}
+/*----------------------------------------*/
+footer{
+    color: var(--second-color);
+    text-align: center;
+    background-color: var(--primary-color);
+}
+/*--------------------KATEGORİ------------------*/
+.kategori{
+    margin: 0 7%;
+    margin-top: 2rem;
+}
+.containerkategori{
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*--------------------MANGA--------------------*/
+.info{
+    margin: 0 7%;
+    margin-top: 2rem;
+}
+.containermanga{
+    padding-top: 6rem;
+    display: flex;
+}
+.containermangaresimbilgi{
+    width: 14rem;
+    color: var(--second-color);
+}
+.containermangaresimbilgi .resim img{
+    width: 14rem;
+    height: 21rem;
+}
+.containermangaresimbilgi div{
+    width: 14rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.containermangaresimbilgi div *{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.containermangaresimbilgi .bilgi{
+    padding: 0.6rem;
+}
+.bilgi .kategori{
+    margin: 0;
+}
+.containermangaadkonu{
+    padding: 0 4vw;
+    width: 100%;
+    height: min-content;
+    color: var(--second-color);
+    overflow: auto;
+}
+.containermangaadkonu .mangaadi h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.containermangaadkonu .mangaikinciadi h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.containermangaadkonu .mangakonu{
+    margin-top: 2rem;
+}
+.containermangaadkonu .mangakonu p{
+    text-align: center;
+    max-height: 25rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 250;
+    display: block;
+}
+.buttons{
+    width: 14rem;
+    display: flex;
+    margin-top: 1rem;
+}
+/*--------------------BOLUM--------------------*/
+.bolumler{
+    margin: 0 7%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+/*----------------------------------------*/
+.okuma{
+    background-color: white;
+    width: min-content;
+    margin: auto;
+}
+.okuma img{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    width: 40rem;
+}
+.cevirmen{
+    width: 40rem;
+    margin: auto;
+    margin-top: 1rem;
+    color: var(--second-color);
+}
+.cevirmen p{
+    font-size: 1.4rem;
+}
+.bolumadi{
+    color: var(--second-color);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.bolumadi *{
+    font-weight: 300;
+}
+.mangah2{
+    color: var(--second-color);
+    text-align: center;
+    font-weight: 300;
+    margin: 0 1rem;
+    margin-top: 2rem;
+}
+.disqusyorum{
+    margin: 0 7%;
+}
+/*----------------COOKİES-----------------*/
+.cookies{
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    padding: 2rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: 32rem;
+    margin: 0 auto;
+    border-radius: 2.5rem;
+    z-index: 100;
+}
+/*----------------------------------------*/
+@media (max-width: 1000px) {
+    .containermangaadkonu{
+        padding: 0;
+    }
+    .containermangaadkonu .mangakonu{
+        margin-top: 0.4rem;
+    }
+    .mangakonu p{
+        scale: 0.8;
+    }
+}
+@media (max-width: 880px) {
+    .navtext{
+        scale: 0.7;
+        padding: 0 0.2rem;
+    }
+    .navtext:hover{
+        scale: 0.9;
+    }
+    .bolumler .btn{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 700px) {
+    .navtext{
+        scale: 0.7;
+        padding: 0 0;
+    }
+    .containermanga{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .containermangaadkonu{
+        margin-top: 2rem;
+    }
+    .containermangaadkonu .mangakonu{
+        margin-top: 0;
+    }
+    .buttons{
+        margin: auto;
+        margin-top: 1.8rem;
+    }
+    .cevirmen{
+        width: 100vw;
+        padding-left: 1rem;
+    }
+}
+@media (max-width: 650px) {
+    .nav2 .navtext{
+        display: none;
+    }
+    .navtext{
+        scale: 0.8;
+        padding: 0 0.4rem;
+    }
+    .navtext:hover{
+        scale: 0.92;
+    }
+    .navanasayfaanasayfa{
+        display: flex;
+    }
+    .manga{
+        width: 7rem;
+        height: 13.72rem;
+        margin: 0 1rem;
+    }
+    .mangaresim img{
+        width: 7rem;
+        height: 10.5rem;
+    }
+    .mangatext h3{
+        font-size: 0.9rem;
+    }
+    .containermangalar{
+        padding: 1;
+    }
+    .yenibolum{
+        margin-top: 0.5rem;
+    }
+    #kategorilersection{
+        margin-top: 0.5rem
+    }
+    .baslik h2{
+        font-size: 1.3rem;
+    }
+    .kategoriler a{
+        scale: 0.8;
+        margin: 0;
+    }
+    .kategoriler a:hover{
+        scale: 0.92;
+    }
+    footer{
+        font-size: 0.8rem;
+        color: var(--second-color);
+    }
+    .cookies{
+        scale: 0.8;
+        width: 100%;
+    }
+}
+@media (max-width: 640px) {
+    .okuma img{
+        width: 100vw;
+    }
+}
+@media (max-width: 570px) {
+    .bolumler j1{
+        display: none;
+    }
+    .bolumadi{
+        scale: 0.85;
+    }
+    .cevirmen p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .containerheader k{
+        display: none;
+    }
+    .bolumler j2{
+        display: none;
+    }
+    .bolumadi{
+        scale: 0.7;
+    }
+    .cookies .btn{
+        scale: 0.9;
+    }
+}

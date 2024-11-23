@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admingirisi.php
+Disallow: /admingirisi2.php
+Disallow: /bolumekle.php
+Disallow: /bolumsayfasi.php
+Disallow: /bolumsil1.php
+Disallow: /bolumsil2.php
+Disallow: /gizlilik.php
+Disallow: /kategorisayfasi.php
+Disallow: /mangaduzenle1.php
+Disallow: /mangaduzenle2.php
+Disallow: /mangaekle.php
+Disallow: /mangasayfasi.php
+Disallow: /mangasil.php
+Disallow: /searchbox.php
+Disallow: /cdn-cgi/l/email-protection
+Sitemap: https://www.cevirimanga.com/sitemap.xml
