@@ -1,0 +1,6 @@
+Copyright 2024 Enes Burak Dikici
+
+Bu yazılım yalnızca inceleme ve eğitim amaçlı olarak paylaşılmaktadır.
+Kodun kopyalanması, değiştirilmesi, dağıtılması, ticari kullanım yapılması veya başka bir yerde yeniden kullanılmasına izin verilmemektedir.
+
+Herhangi bir sorunuz için lütfen dikicienesburak@gmail.com ile iletişime geçin.
