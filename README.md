@@ -8,10 +8,10 @@
 
 <h2>Ekran Görüntüleri</h2>
 
-<h3>Desktop</h3>
+<h3>Masaüstü</h3>
 <img width="1458" alt="cevirimanga-masaustu" src="https://github.com/user-attachments/assets/f8334fcf-f827-46f1-9f4c-2f272a8d83ea">
 
-<h3>Mobile</h3>
+<h3>Mobil</h3>
 <img width="306" alt="cevirimanga-mobil" src="https://github.com/user-attachments/assets/ab1eb929-e1f2-4ae7-8511-8ef83d42a07a">
 
 <h2>Telif Hakkı</h2>
